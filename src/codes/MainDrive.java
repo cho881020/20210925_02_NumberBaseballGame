@@ -12,9 +12,17 @@ public class MainDrive {
 //		3자리 숫자를 채우기 위한 for
 		for (int i=0 ; i < cpuNumbers.length ; i++) {
 			
-//			1~9 숫자
+//			제대로 된 숫자가 뽑힐때까지 무한반복.
+			while (true) {
+				
+
+//				1~9 랜덤숫자
+				int randomNum = (int) (Math.random()*9+1);
+				
+//				중복 X 검사	
+				
+			}
 			
-//			중복 X 검사
 			
 		}
 		
