@@ -46,19 +46,25 @@ public class MainDrive {
 		}
 		
 //		3자리 숫자 확인.
-		for (int cpuNum :  cpuNumbers) {
-			System.out.println(cpuNum);
-		}
+//		for (int cpuNum :  cpuNumbers) {
+//			System.out.println(cpuNum);
+//		}
 		
 		
 //		플레이어 : 3자리 정수 입력.
 		Scanner myScanner = new Scanner(System.in);
+		
+//		몇번이나 시도했는지 횟수.
+		int tryCount = 0;
 		
 //		3S 맞출때까지 계속 입력. => 무한 반복
 		while (true) {
 			
 			System.out.print("3자리 숫자 입력 : ");
 			int inputNum = myScanner.nextInt();
+			
+//			1번 추가 시도 했다.
+			tryCount++;
 			
 			
 //			입력한 숫자를 3자리 배열로 쪼개자.
@@ -106,6 +112,10 @@ public class MainDrive {
 			
 			if (strikeCount == 3) {
 				System.out.println("축하합니다! 정답을 맞췄습니다.");
+				
+//				총 시도 횟수도 표시.
+				System.out.println(tryCount + "회 만에 맞췄습니다.");
+				
 				break;
 			}
 			
