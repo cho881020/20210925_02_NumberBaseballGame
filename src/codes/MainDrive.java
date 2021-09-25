@@ -19,7 +19,24 @@ public class MainDrive {
 //				1~9 랜덤숫자
 				int randomNum = (int) (Math.random()*9+1);
 				
-//				중복 X 검사	
+//				중복 X 검사
+				boolean isDuplOk = true;
+				
+//				문제 숫자 중 중복?
+				for (int num  : cpuNumbers) {
+					if (randomNum == num) {
+						isDuplOk = false;
+						break;
+					}
+				}
+				
+//				중복 검사에 통과했나?
+				if (isDuplOk) {
+//					문제 숫자로 선정.
+					cpuNumbers[i] = randomNum;
+//					제대로 숫자 나옴. 무한반복 종료.
+					break;
+				}
 				
 			}
 			
