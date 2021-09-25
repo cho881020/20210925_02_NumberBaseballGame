@@ -1,5 +1,7 @@
 package codes;
 
+import java.util.Scanner;
+
 public class MainDrive {
 	
 	public static void main(String[] args) {
@@ -49,6 +51,29 @@ public class MainDrive {
 		}
 		
 		
+//		플레이어 : 3자리 정수 입력.
+		Scanner myScanner = new Scanner(System.in);
+		
+//		3S 맞출때까지 계속 입력. => 무한 반복
+		while (true) {
+			
+			System.out.print("3자리 숫자 입력 : ");
+			int inputNum = myScanner.nextInt();
+			
+		}
+		
+		
+		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
