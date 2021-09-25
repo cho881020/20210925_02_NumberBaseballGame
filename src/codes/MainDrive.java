@@ -102,6 +102,13 @@ public class MainDrive {
 			
 			System.out.println(strikeCount+"S " + ballCount + "B 입니다.");
 			
+//			3S맞췄다면, 무한반복 종료. (게임 종료)
+			
+			if (strikeCount == 3) {
+				System.out.println("축하합니다! 정답을 맞췄습니다.");
+				break;
+			}
+			
 		}
 		
 		
