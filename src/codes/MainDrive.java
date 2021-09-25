@@ -60,6 +60,19 @@ public class MainDrive {
 			System.out.print("3자리 숫자 입력 : ");
 			int inputNum = myScanner.nextInt();
 			
+			
+//			입력한 숫자를 3자리 배열로 쪼개자.
+//			123 => [1, 2, 3]
+			int[] myNumbers = new int[3];
+			
+//			각 자리별로 계산해서 대입.
+			myNumbers[0] = inputNum / 100;  // 100의 자리만 추출.
+			myNumbers[1] = inputNum / 10 % 10; // 123 => 12.3 => 12로변환 => 1의자리 추출
+			myNumbers[2] = inputNum % 10; // 1의자리만 추출.
+			
+			
+			
+			
 		}
 		
 		
