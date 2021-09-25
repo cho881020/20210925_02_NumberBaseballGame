@@ -71,7 +71,36 @@ public class MainDrive {
 			myNumbers[2] = inputNum % 10; // 1의자리만 추출.
 			
 			
+//			두개의 배열을 비교. ?S ?B인지 판정.
+//			S 개수 / B 개수 구하자.
+			int strikeCount = 0;
+			int ballCount = 0;
 			
+//			내 숫자 하나 -> 문제 숫자 3개 비교 -> 통째로 3번 반복.
+			for (int i=0 ; i < myNumbers.length ; i++) {
+				
+				for (int j=0 ; j < cpuNumbers.length ; j++ ) {
+					
+//					내 숫자 / 컴퓨터 문제 숫자가 같은가?
+					if (myNumbers[i] == cpuNumbers[j]) {
+						
+//						같은 숫자 발견! => 추가검사 : 위치(index)도 같은가?
+						if (i == j) {
+//							숫자도 같은데 -> 위치도 같다. S 발견
+							strikeCount++;
+						}
+						else {
+//							숫자는 같지만 -> 위치만 다르다. B 발견
+							ballCount++;
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+			System.out.println(strikeCount+"S " + ballCount + "B 입니다.");
 			
 		}
 		
